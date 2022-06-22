@@ -1,0 +1,41 @@
+.row{
+    margin: 0px auto;
+    text-align: center;
+    width: 100%;
+    padding: 10px 30px;
+    background: white;
+
+}
+.principal{
+    display: flex;
+    background: linear-gradient(200deg, #fffdcd , #fdb8ff )
+}
+.col{
+    padding: 0px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton{
+    color: rgb(7, 25, 90);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    background: transparent;
+}
+p{
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin: 0px auto;
+}
+
+@media (max-width:576px){
+    .row {
+        padding: 10px 0px;
+    }
+}

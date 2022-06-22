@@ -1,0 +1,5 @@
+<swiper class="swiper" [config]="swiper">
+  <ng-template swiperSlide *ngFor="let serie of series">
+    <app-tarjeta [serie]="serie"></app-tarjeta>
+  </ng-template>
+</swiper>

@@ -1,0 +1,40 @@
+<div class="container base">
+    <div class="principal">
+      <div class="container acomodar">
+        <div class="card bg-dark text-white" *ngFor="let serie of series" (click)="click($event)" >
+          <img [src]="serie.portada" class="card-img" value="serie.name">
+          <div class="card-img-overlay">
+            <h5 class="card-title">{{serie.name}}</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div>
+        <form class="mb-3 container" (ngSubmit)="upload()" enctype="multipart/form-data">
+          <div *ngIf="haycaps == 1">
+            <h3>Sin caps, agrege el primer cap:</h3>
+          </div>
+          <div *ngIf="haycaps == 2">
+            <h3>Capitulos actuales:</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngFor="let cap of serieCaps">{{cap[0]}} - {{cap[1]}} - {{cap[2]}} <button type="button" class="btn btn-outline-warning" *ngIf="!sureDelete" (click)="eliminarCap(cap[0])">Eliminar</button><button type="button" class="btn btn-outline-success" *ngIf="cap[0]==capBandera" (click)="confirmar()">Confirmar</button><button *ngIf="cap[0]==capBandera" type="button" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button></li>
+            </ul>
+          </div>
+          <p>Numero del capitulo</p>
+          <input class="form-control" type="number" name="capNumber" [(ngModel)]="CapInfo.numeroCap">
+          <br>
+          <label for="Nombre" class="form-label">Nombre del capitulo</label>
+          <input type="text" class="form-control" name="Nombre" [(ngModel)]="CapInfo.nombreCap" required>
+          <br><br>
+          <label for="files">Paginas</label>  
+          <input name="files" class="form-control" type="file" accept="image/*" (change)="seleccionarArchivo($event)" multiple required>
+          <p class="adv"><span class="text-danger">Obligatorio</span> las paginas deben estar enumerados empezando por el 1, por ejemplo: <span class="text-primary">1.png; 2.png...</span></p>
+          <br>
+          <label for="fecha" class="form-label">Fecha de subida</label>
+          <input type="text" class="form-control" id="fecha" placeholder="yyyy-mm-dd" name="fecha" [(ngModel)]="CapInfo.fechaSubida" required>
+          <br>
+          <button class="btn btn-primary"> Subir capitulo </button>
+        </form>
+      </div>  
+    </div>
+</div>

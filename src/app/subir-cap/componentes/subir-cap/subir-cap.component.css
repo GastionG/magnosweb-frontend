@@ -1,0 +1,63 @@
+.base{
+    margin: 0px auto;
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px 50px;
+}
+
+
+.principal{
+    background: linear-gradient(200deg, #fffdcd , #fdb8ff );
+    margin: auto;
+    padding: 20px;
+
+}
+.caja{
+    padding-top: 5px;
+}
+.acomodar{
+    float: left;
+    
+}
+.card {
+    max-width: 400px;
+    max-height: 100px;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px;
+    cursor: pointer;
+    background-color: black;
+    transition: filter;
+}
+
+.card-img{
+    overflow:visible;
+    vertical-align: middle;
+    filter: brightness(15%);
+    transition: .5s;
+}
+.card-img:hover{
+    filter: brightness(35%);
+    transition: .5s;
+
+}
+.card-img-selected{
+    overflow:visible;
+    vertical-align: middle;
+    filter: brightness(55%);
+}
+
+.card-img-overlay{
+    text-align: center;
+    pointer-events: none;
+}
+
+.adv{
+    font-size: 14px;
+}
+
+@media (max-width:576px){
+    .base {
+        padding: 10px 0px;
+    }
+}

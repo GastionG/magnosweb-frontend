@@ -1,0 +1,7 @@
+
+
+<swiper class="swiper" [config]="swiper">
+    <ng-template swiperSlide *ngFor="let capInfo of capsRecientes">
+        <app-tarjeta-cap [capInfo]="capInfo"></app-tarjeta-cap>
+    </ng-template>
+</swiper>

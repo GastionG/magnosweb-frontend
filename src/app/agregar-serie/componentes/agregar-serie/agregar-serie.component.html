@@ -1,0 +1,150 @@
+<div class="container base">
+    <div class="principal">
+        <form class="row" (ngSubmit)="onSubmit()" #formSerie = "ngForm">
+            <div class="col">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" [(ngModel)]="serieModel.name" name="name" required>
+                  </div>
+              
+                  <div class="mb-3">
+                    <label for="sinopsis" class="form-label">Sinopsis</label>
+                    <textarea class="form-control" id="sinopsis" [(ngModel)]="serieModel.sinopsis" name="sinopsis" required></textarea>
+                  </div>
+              
+                  <div class="mb-3">
+                      <label for="fecha" class="form-label">Fecha</label>
+                      <input type="text" class="form-control" id="fecha" placeholder="yyyy-mm-dd" [(ngModel)]="serieModel.fecha" name="fecha" required>
+                  </div>
+              
+                  <div>
+                      Estado
+                      <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (change)="this.serieModel.estado = false" checked>
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            finalizado
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value=1 (change)="this.serieModel.estado = true">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            activo
+                          </label>
+                      </div>
+                  
+                  </div>
+                  <div>
+                    <br>
+                    <label class="form-check-label">
+                        Portada
+                    </label>
+                    <p class="adv"><span class="text-danger">Obligatorio </span>La extension de la portada debe ser <span class="text-primary">.jpg</span></p>
+
+                    <input class="form-control" type="file" accept="image/*" (change)="seleccionarArchivo($event)">
+                  </div>
+            </div>
+            
+            
+            <div class="col" >
+                <div class="form-check acomodar" >
+                    <input class="form-check-input" type="checkbox" value="" id="accion" [(ngModel)]="serieModel.accion" name="accion">
+                    <label class="form-check-label" for="accion">
+                      Accion
+                    </label>
+                </div>
+                <div class="form-check acomodar" >
+                    <input class="form-check-input" type="checkbox" value="" id="aventura" [(ngModel)]="serieModel.aventura" name="aventura">
+                    <label class="form-check-label" for="aventura">
+                        Aventura
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="comedia" [(ngModel)]="serieModel.comedia" name="comedia">
+                    <label class="form-check-label" for="comedia">
+                        Comedia
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="cosasdelavida" [(ngModel)]="serieModel.cosasdelavida" name="cosasdelavida">
+                    <label class="form-check-label" for="cosasdelavida">
+                        Cosas de la vida
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="ecchi" [(ngModel)]="serieModel.ecchi" name="ecchi">
+                    <label class="form-check-label" for="ecchi">
+                        Ecchi
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="fantasia" [(ngModel)]="serieModel.fantasia" name="fantasia">
+                    <label class="form-check-label" for="fantasia">
+                        Fantasia
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="magia" [(ngModel)]="serieModel.magia" name="magia">
+                    <label class="form-check-label" for="magia">
+                        Magia
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="sobrenatural" [(ngModel)]="serieModel.sobrenatural" name="sobrenatural">
+                    <label class="form-check-label" for="sobrenatural">
+                        Sobrenatural
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="horror" [(ngModel)]="serieModel.horror" name="horror">
+                    <label class="form-check-label" for="horror">
+                        Horror
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="misterio" [(ngModel)]="serieModel.misterio" name="misterio"> 
+                    <label class="form-check-label" for="misterio">
+                        Misterio
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="psicologico" [(ngModel)]="serieModel.psicologico" name="psicologico">
+                    <label class="form-check-label" for="psicologico">
+                        Psicologico
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="romance" [(ngModel)]="serieModel.romance" name="romance">
+                    <label class="form-check-label" for="romance">
+                        Romance
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="ficcion" [(ngModel)]="serieModel.ficcion" name="ficcion">
+                    <label class="form-check-label" for="ficcion">
+                        Ficcion
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="deporte" [(ngModel)]="serieModel.deporte" name="deporte">
+                    <label class="form-check-label" for="deporte">
+                        Deporte
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="reencarnacion" [(ngModel)]="serieModel.reencarnacion" name="reencarnacion">
+                    <label class="form-check-label" for="reencarnacion">
+                        Reencarnacion
+                    </label>
+                </div>
+                <div class="form-check acomodar">
+                    <input class="form-check-input" type="checkbox" value="" id="vidaescolar" [(ngModel)]="serieModel.vidaescolar" name="vidaescolar">
+                    <label class="form-check-label" for="vidaescolar">
+                        Vida Escolar
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="display: block; margin: 20px;" [disabled]="formSerie.invalid">Guardar</button>
+            </div>
+          </form>
+    </div>
+</div>

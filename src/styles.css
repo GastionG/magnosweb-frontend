@@ -1,0 +1,7 @@
+@import '~swiper/swiper-bundle';
+.swiper-button-prev {
+    color: #ff39e5; 
+}
+.swiper-button-next {
+    color: #ff39e5; 
+}

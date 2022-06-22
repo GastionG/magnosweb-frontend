@@ -1,0 +1,11 @@
+
+.centrar {
+    text-align: center;
+    margin: 0px auto;
+}
+img{
+    max-width: 700px;
+}
+.container-fluid{
+    padding: 0;
+}

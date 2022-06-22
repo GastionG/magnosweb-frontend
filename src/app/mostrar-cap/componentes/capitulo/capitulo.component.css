@@ -1,0 +1,21 @@
+div{
+    background: transparent
+}
+p{
+    color: rgb(221, 216, 226);
+}
+.container-fluid{
+    padding: 0;
+}
+.op{
+    padding: 10px 0;
+}
+.info{
+    background: white;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.text{
+    font-size: 22px;
+}

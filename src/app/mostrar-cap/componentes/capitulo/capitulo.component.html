@@ -1,0 +1,21 @@
+
+<div class="op">
+    <div class="info">
+        <div class="text">
+            Capitulo {{cap}} {{nameCap}}
+        </div>
+        <div class="date">
+            {{fechaCap}}
+        </div>
+    </div>
+    
+    <app-opciones [capAct]="cap" [nameSerie]="nameSerie" [idSerie]="idSerie"></app-opciones>
+</div>
+
+<div>
+    <app-imagen  *ngFor="let i of numeros" [nameSerie]="nameSerie" [capN]="cap" [pag]="i"></app-imagen>
+</div>
+
+<div class="op">
+    <app-opciones [capAct]="cap" [nameSerie]="nameSerie" [idSerie]="idSerie"></app-opciones>
+</div>

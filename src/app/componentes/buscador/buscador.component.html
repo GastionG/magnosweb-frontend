@@ -1,0 +1,14 @@
+<div class="base">
+    <input class="inp" type="text" name="filter" [(ngModel)]="filterSerie" (keyup)="input($event)" placeholder="BUSCAR MANGA">
+    <div class="resultados" *ngIf="inputActive">
+        <a (click)="limpiar()" href="#" [routerLink]="['/serie', serie.name]" *ngFor="let serie of series | filter:filterSerie" class="resultado">
+            <div class="imgCon">
+                <img [src]="serie.portada" alt="">
+            </div>
+            <div class="title">
+                {{serie.name}}
+            </div>
+        </a>
+        <div class="finalizador"></div>
+    </div>
+</div>

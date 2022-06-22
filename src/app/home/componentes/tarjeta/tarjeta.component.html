@@ -1,0 +1,10 @@
+<div class="card">
+    <a [routerLink]="['/serie', serie.name ]" (mouseover)="over()" (mouseout)="over()">
+        <img class="" [src]="portada">
+        <div class="cont" [@oscurecer]="isOver ? 'oscuro' : 'claro'">
+            <div class="imageText" [@spawn]="isOver ? 'oscuro' : 'claro'">{{serie.name}}</div>
+        </div>
+        
+    </a>
+
+</div>

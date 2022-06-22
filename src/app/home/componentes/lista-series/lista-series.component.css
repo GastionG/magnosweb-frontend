@@ -1,0 +1,13 @@
+.swiper{
+    border-radius: 30px;
+}
+
+div{
+    background: linear-gradient(200deg, #fffdcd , #fdb8ff );
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width:576px){
+}

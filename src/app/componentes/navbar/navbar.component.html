@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="todo">
+    
+    <div>
+      <div class="logo-text navbar-brand">
+        <a href="#" [routerLink]="['']"><img src="../../../assets/images/msL.png" alt=""></a>
+      </div>
+      <div class="opciones">
+        <div class="opcion" [routerLink]="['']">
+          <a [class]="{seleccionado: sI, seleccionadoNo: !sI}">INICIO</a>
+        </div>
+        <div class="opcion" [routerLink]="['unetenos']">
+          <a [class]="{seleccionado: sU, seleccionadoNo: !sU}">UNETENOS</a>
+        </div>
+        <div class="opcion" [routerLink]="['apoyanos']">
+          <a [class]="{seleccionado: sA, seleccionadoNo: !sA}">APOYANOS</a>
+        </div>
+      </div>
+    </div>
+    <div class="bus">
+      <app-buscador></app-buscador>
+    </div>
+  </div>
+</nav>

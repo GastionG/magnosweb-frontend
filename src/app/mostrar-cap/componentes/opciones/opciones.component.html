@@ -1,0 +1,14 @@
+<div class="row" >
+    <div class="principal row">
+        <div class="col">
+            <div *ngIf="anterior" type="button" class="rounded-start boton B" (click)="loadPrevCap()"><p>Capitulo anterior</p></div>
+        </div>
+        <div class="col">
+            <div type="button" class="boton A" [routerLink]="['/serie', nameSerie]"><p>Volver</p></div>
+        </div>
+        <div class="col">
+            <div *ngIf="siguiente" type="button" class="rounded-end boton B" (click)="loadNextCap()"><p>Capitulo siguiente</p></div>
+        </div>
+    </div>
+    
+</div>

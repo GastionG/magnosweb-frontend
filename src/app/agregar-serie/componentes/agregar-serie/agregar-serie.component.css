@@ -1,0 +1,24 @@
+.acomodar{
+    display: inline-block;
+    margin: 5px 10px;
+}
+.base{
+    margin: 0px auto;
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px 50px;
+}
+.principal{
+    background: linear-gradient(200deg, #fffdcd , #fdb8ff );
+    margin: auto;
+    padding: 20px;
+
+}
+.adv{
+    font-size: 14px;
+}
+@media (max-width:576px){
+    .base {
+        padding: 10px 0px;
+    }
+}

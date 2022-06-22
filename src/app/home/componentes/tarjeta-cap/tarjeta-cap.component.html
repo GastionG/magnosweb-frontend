@@ -1,0 +1,15 @@
+
+<div class="card" [style.background-image]="'url('+portada+')'">
+    <a [routerLink]="['/serie', capInfo.name]">
+        <div class="info">
+            <div>
+                {{capInfo.name}}
+            </div>
+            <div class="numero">
+                Capitulo {{capInfo.numeroCap}}
+            </div>  
+        </div>
+        
+        
+    </a>
+</div>
