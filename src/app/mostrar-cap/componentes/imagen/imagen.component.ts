@@ -22,7 +22,7 @@ export class ImagenComponent implements OnInit {
   
   ngOnInit(): void {
 
-    this.url = "https://magnosscan.000webhostapp.com/magnosBD/obras/"+this.nameSerie.toLowerCase()+"/capitulos/"+this.capN+"/"+this.pag+".jpg";
+    this.url = "assets/snk/caps/"+this.capN+"/"+this.pag+".jpg";
     //this.url = "http://localhost/MagnosBD/obras/"+this.nameSerie.toLowerCase()+"/capitulos/"+this.capN+"/"+this.pag+".jpg";
     
   }

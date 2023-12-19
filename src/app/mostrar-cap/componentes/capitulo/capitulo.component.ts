@@ -36,20 +36,18 @@ export class CapituloComponent implements OnInit {
       this.cap = param.cap;
 
       this.serieService.getCap(param.serie, param.cap).subscribe((a: any)=>{
-        this.pagCan = a[0];
-        this.idSerie = a[1].id;
-        this.nameCap = a[2].nombreCap;
-        this.fechaCap = a[2].fechaSubida;
+
+        const capitulo = a.caps.find((a: any)=>a.number == param.cap);
+
+        this.pagCan = 40;
+        this.idSerie = a.id;
+        this.nameCap = capitulo.name;
+        this.fechaCap = capitulo.date;
 
         console.log(a);
-        
-        
-        
-        
 
         for (let i = 1; i < this.pagCan+1; i++) {
           this.numeros.push(i);
-          
         }
 
       });

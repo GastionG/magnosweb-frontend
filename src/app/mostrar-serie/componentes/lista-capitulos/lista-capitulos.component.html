@@ -1,14 +1,11 @@
-
-
-
-
 <div class="base">
   <div class="cap d-flex" *ngFor="let cap of caps">
-    <div class="numero">{{cap[0]}}</div>
+    <div class="numero">{{ cap.number }}</div>
 
-    <a class="text "  [routerLink]="['/cap', serieName, cap[0]]">CAPITULO {{cap[0]}}: {{cap[1]}}</a>
+    <a class="text" [routerLink]="['/cap', serieName, cap.number]"
+      >CAPITULO {{ cap.number }}: {{ cap.name }}</a
+    >
 
-    <div class="fecha ms-auto">{{cap[2]}}</div>
-    
+    <div class="fecha ms-auto">{{ cap.date }}</div>
   </div>
 </div>

@@ -70,9 +70,7 @@ export class TarjetaComponent implements OnInit {
 
   
   ngOnInit(): void {
-    let newname = this.serie.name.replace(/ /g, "%20").toLowerCase();
-    this.portada = this.enlaces.bd + "/obras/" + newname + "/Portada.jpg";
-
+    this.portada = this.serie.portada;
   }
 
   isOver = false;

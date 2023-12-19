@@ -1,24 +1,24 @@
 <div class="container-fluid d-flex">
-    <div class="portadas">
-        <div class="portada">
-            <img [src]="portada">
-        </div>
-        <div class="portadaBack">
-            <img [src]="portada">
-        </div>
+  <div class="portadas">
+    <div class="portada">
+      <img style="width: 350px" [src]="portada" />
     </div>
-    
-    <div class="info flex-grow-1">
-        <div class="h1">{{serie.name}}</div>    
-        <div class="infoCon ">
-            <p>{{serie.sinopsis}}</p>
-            
-        </div>
-        <div class="generoCon">
-            <h6 class="genero" *ngFor="let g of generos">{{g}}</h6>
-        </div>
-        
+    <div class="portadaBack">
+      <img style="width: 350px" [src]="portada" />
     </div>
+  </div>
+  <div class="info flex-grow-1">
+    <div class="h1">{{ serie.name }}</div>
+    <div class="infoCon">
+      <p>{{ serie.sinopsis }}</p>
+    </div>
+    <div class="generoCon">
+      <h6 class="genero" *ngFor="let g of generos">{{ g }}</h6>
+    </div>
+  </div>
 </div>
 
-<app-lista-capitulos [caps]="caps" [serieName]="serie.name"></app-lista-capitulos>
+<app-lista-capitulos
+  [caps]="caps"
+  [serieName]="serie.name"
+></app-lista-capitulos>

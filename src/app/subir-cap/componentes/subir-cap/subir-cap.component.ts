@@ -5,7 +5,7 @@ import { Serie } from 'src/app/models/serie';
 
 import { SeriesService } from 'src/app/services/crud.service';
 
-import * as $ from 'jquery';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-subir-cap',

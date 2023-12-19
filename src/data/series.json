@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1",
+    "name": "Solo Leveling",
+    "sinopsis": "Sinopsis de la serie 1",
+    "fecha": "2022-01-01",
+    "estado": true,
+    "portada": "assets/solo-leveling/solo-leveling-portrait.jpeg"
+  },
+  {
+    "id": "2",
+    "name": "One Piece",
+    "sinopsis": "Sinopsis de la serie 2",
+    "fecha": "2022-01-01",
+    "estado": true,
+    "portada": "assets/one-piece/one-piece-portrait.webp"
+  },
+  {
+    "id": "3",
+    "name": "Shingeki no Kyojin",
+    "sinopsis": "La historia se desarrolla en un mundo ficticio en el que la humanidad está al borde de la extinción a causa de unas criaturas humanoides llamadas «titanes», lo que obliga a los supervivientes a refugiarse en tres enormes murallas que impiden el acceso a dichos monstruos. La trama gira en torno a Eren Jaeger quien después de perder a su madre a manos de los titanes, decide unirse al «Ejército de las murallas» junto a Mikasa Ackerman y Armin Arlert con el objetivo de vengar la muerte de su madre y destruir a los titanes.",
+    "fecha": "2022-01-01",
+    "estado": true,
+    "portada": "assets/snk/snk-portrait.webp",
+    "accion": 1,
+    "aventura": 1,
+    "horror": 1,
+    "ficcion": 1,
+
+    "caps": [
+      {
+        "id": "1",
+        "number": "1",
+        "name": "Para ti, en 2000 años",
+        "date": "2009-09-09"
+      },
+      {
+        "id": "2",
+        "number": "2",
+        "name": "Aquel día",
+        "date": "2009-09-09"
+      },
+      {
+        "id": "3",
+        "number": "3",
+        "name": "La noche de la disolución",
+        "date": "2009-09-09"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Naruto",
+    "sinopsis": "Sinopsis de la serie 4",
+    "fecha": "2022-01-01",
+    "estado": true,
+    "portada": "assets/naruto/naruto-portrait.webp"
+  }
+]

@@ -35,7 +35,7 @@ export class SerieComponent implements OnInit {
   enlaces: Links = new Links;
   public serie: Serie = new Serie(0, "", "", "", false, null, null)
   public generos: any = [];
-  public caps: any;
+  public caps: any = [];
 
   ngOnInit(): void {
 
@@ -44,11 +44,10 @@ export class SerieComponent implements OnInit {
       console.log(this.nameSer);
 
       this.seriesService.getSerie(this.nameSer).subscribe((serie: any)=>{
-        this.serie = serie[0];
-        this.caps = serie[1];
         console.log(serie);
-        let newname = this.serie.name.replace(/ /g, "%20").toLowerCase();
-        this.portada = this.enlaces.bd + "/obras/" + newname + "/Portada.jpg";
+        this.serie = serie;
+        this.caps = serie.caps;
+        this.portada = serie.portada;
         
         
         if(this.serie.accion == 1) this.generos.push("Accion");
